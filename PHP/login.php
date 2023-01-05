@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 });
             </script>
 
-        <?php
+        <?php        
             //header('location:../HTML/menu.php');  
         } else {
             //echo "<script> alert('Credenciales incorrectas'); window.location='../HTML/index.php';</script>";

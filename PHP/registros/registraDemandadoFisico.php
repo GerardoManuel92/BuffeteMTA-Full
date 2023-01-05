@@ -21,7 +21,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $Registrar = $_POST['btnRegistrar'];
-    $RegistrarMoral = $_POST['btnRegistraFisica'];
+    $RegistrarFisica = $_POST['btnRegistraFisica'];
 
     if (isset($Registrar)) {
         $direccion = $_POST["txtDireccion"];
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     }
-    if (isset($RegistrarMoral)) {
+    if (isset($RegistrarFisica)) {
         $id_demandado = $_POST["txtIdDemandado"];
         $nombre = $_POST["txtNombre"];
         $paterno = $_POST["txtPaterno"];

@@ -32,7 +32,7 @@
             </li>
             <li><a class="navegador__menu--link" href="#">Extra</a>
                 <ul class="menu-vertical">
-                <li><a class="navegador__menu--link" href="../HTML/estados.php">Estados de Asuntos</a></li>
+                    <li><a class="navegador__menu--link" href="../HTML/estados.php">Estados de Asuntos</a></li>
                     <li><a class="navegador__menu--link" href="../HTML/estudios.php">Grados Académicos</a></li>
                     <li><a class="navegador__menu--link" href="../HTML/lugares.php">Lugares de Audiencias</a></li>
                     <li><a class="navegador__menu--link" href="../HTML/tipos.php">Tipos de asuntos para demandas</a></li>
@@ -43,13 +43,14 @@
         </ul>
     </div>
     <div class="navegador__sesion">
-        <a class="navegador__menu--link" href="../index.php">Cerrar sesion</a>
+            
+        <a class="navegador__menu--link" href="../index.php"> Usuario</a>
     </div>
 </nav>
 
 <body>
     <main class="contenedor-menu">
-        <div class="contenedor-menu--img">
+        <div class="contenedor-menu--img">            
             <img class="img" src="../IMG/logotipo.png" alt="">
         </div>
     </main>
