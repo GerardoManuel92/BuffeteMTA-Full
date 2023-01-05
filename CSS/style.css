@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --color1: #43777D;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --gris: #ECECEC;
+
+    --fuentePrincipal: font-family: 'Inter', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* F O R M U L A R I O      D E         L O G I N  */
+
+/* Encabezado */
+
+.encabezado {
+    font-size: 3rem;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Contenedor*/
+
+@media (min-width : 800px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);        
+        width: 95%;
+        height: 90rem;
+        gap: 2rem;
+    }
+
+    .contenedor2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);        
+        width: 95%;
+        height: 120rem;
+        gap: 2rem;
+    }
+    
+    .contenedor3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);        
+        width: 95%;
+        height: 90rem;
+        gap: 2rem;
+    }
+
+    .contenedor3 .contenedor__formulario .formulario .fieldset2{
+        height : 20rem;
+    }
+}
+
+.contenedor__logo,
+.logo-registro {
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__campos {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    margin: auto;
+}
+
+@media (min-width : 800px) {
+    .contenedor__campos--formulario {
+        width: 90%;
+    }
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.campos__texto {
+    display: grid;
+}
+
+.campos__texto--label,
+.campos__texto--input,
+.campos__texto--select {
+    font-size: 2.5rem;
+    gap: 2rem;
+}
+
+.campos__texto--input,
+.campos__texto--select {
+    border-style: none;
+    border-radius: 1rem;
+    background-color: var(--gris);
+    padding: 1.5rem;
+}
+
+.campos__texto--select {
+    width: 35rem;
+}
+
+.boton {
+    padding: 2.5rem;
+    border-style: none;
+    border-radius: 1rem;
+    background-color: var(--color1);
+    color: var(--blanco);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.campos__texto--label,
+.registro__texto--label {
+    font-weight: bold;
+}
+
+.campos__texto--link {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.link {
+    font-size: 2.8rem;
+    color: var(--color1);
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
+.boton:hover,
+.link:hover {
+    cursor: pointer;
+    color: var(--negro);
+}
+
+.cuerpo-login {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* F O R M U L A R I O      D E       R E G I S T R O  */
+
+@media (min-width : 800px) {
+    .contenedor-registro {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 100%;
+        height: 70rem;
+        gap: 2rem;
+    }
+
+    .logo-registro {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.logo-registro .contenedor__logo--logotipo {
+    height: 20rem;
+    width: 40rem;
+    position: relative;
+}
+
+.registro-campos {
+    display: grid;
+    justify-content: center;
+}
+
+@media (min-width : 768px) {
+    .registro-campos .campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.registro-campos .campos .campos__texto .boton {
+    padding: 1rem;
+}
+
+.registro-campos .link {
+    text-align: center;
+}
+
+.formulario-registro legend{
+    font-size: 1.8rem;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+/*  M E N U     P R I N C I P A L   */
+
+.contenedor-menu {
+    background-color: var(--color1);
+    width: 100%;
+    height: 55rem;
+    margin-top: 2rem;
+}
+
+.contenedor-menu--img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    margin-top: 8rem;
+}
+
+@media (min-width : 800px) {
+    .navegador {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        background-color: var(--gris);
+        font-size: 6rem;
+        margin-top: 1rem;
+    }
+}
+
+.navegador__sesion {
+    margin-right: 3rem;
+}
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-horizontal>li>a {
+    display: block;
+    padding: 1.5rem 2rem;
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-horizontal>li:hover {
+    background-color: var(--blanco);
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 20rem;
+    background-color: var(--gris);
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li:hover {
+    background-color: var(--color1);
+}
+
+.menu-vertical li a {
+    display: block;
+    color: var(--negro);
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem 1.5rem 2rem;
+    text-decoration: none;
+}
+
+
+@media (min-width : 800px) {
+    .finsesion {
+        margin-left: 50rem;
+    }
+}
+
+.finsesion .navegador__menu--link {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+/*  R E G I S T R O S   A B O G A D O S */
+
+@media (min-width : 768px) {
+    .contenedor__formulario fieldset {
+        width: 133rem;
+        height: 40rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+}
+
+.contenedorModificacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color1);
+    height: 100%;
+}
+
+.contenedor__formularioModificacion {    
+    background-color: var(--blanco);
+    border-radius: 1rem;
+    box-shadow: 5px 10px 8px 10px rgba(0, 0, 0, 0.7);
+}
+
+.contenedor__formularioModificacion fieldset {    
+    width: 70rem;
+    height: 100%;
+    margin-top: 2rem;   
+}
+
+.formularioMoral fieldset{
+    height : 20rem;
+}
+
+
+
+@media (max-width : 900px) {
+    .cabezal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10rem;
+    }
+    
+
+    .cabezal__logo--logo {
+        width: 15rem;
+    }    
+
+    .finsesion {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+    }
+
+    .navegador__sesion {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .navegador__menu--link {
+        font-size: 2rem;
+    }    
+}
+
+.cabezalModif{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color1);
+}
+
+.cabezalModif .cabezal__logo--titulo h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.cabezal__logo--logo {
+    width: 25rem;
+    height: 10rem;
+}
+
+.cabezal__logo--titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabezal__logo--titulo p {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color1);
+    margin-top: 3rem;
+}
+
+.legend {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+@media (min-width : 768px) {
+    .registro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        gap: 2rem;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.cabezal {
+    display: flex;
+    align-items: center;
+    background-color: var(--color1);
+    height: 15rem;
+}
+
+.registro__texto--inputId{
+    border-style: none; 
+    text-align: center;
+    font-weight: bold;
+    color: var(--color1);       
+}
+
+.registro__radios{
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+    column-gap : 4rem;
+    font-size : 3rem;
+    margin : 4rem 4rem;
+}
+
+.registro__texto,
+.registro__boton {
+    display: flex;
+    flex-direction: column;
+}
+
+.registro__botones{
+    display: flex;
+    flex-direction: row;
+}
+.registro__botones a{
+    text-align: center;
+    text-decoration: none;
+}
+
+.registro__texto--label {
+    font-size: 2rem;
+}
+
+.registro__texto--input {
+    margin-top: 1rem;
+    padding: 1.3rem;
+    font-size: 1.2rem;
+}
+
+.registro__boton--submit {
+    padding: 2rem;
+    font-size: 2rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border-style: none;
+    background-color: var(--color1);
+    color: var(--blanco);
+    font-weight: bold;
+    width: 20rem;
+}
+
+.registro__boton--submit:hover {
+    color: var(--negro);
+    border: 1px solid var(--negro);
+    cursor: pointer;
+}
+
+.registro__texto--select {
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.registro__texto--select option{
+    font-size: 2rem;
+}
+
+.contenedor__tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 1rem;   
+}
+
+.contenedor__tabla h2{
+    font-size: 2.8rem;
+    color: var(--color1);
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+.tabla-registros {
+    width: 100%;
+    max-height: 100%;
+    border-collapse: collapse;
+    min-width: max-content;
+}
+
+.table-wrapper{
+    max-height: 50rem;    
+    overflow-y: scroll;
+    margin: 2rem;
+    width: 100rem;
+}
+
+.outer-wrapper{
+    border: 1px solid var(--negro);
+    box-shadow: 0px 0px 3px var(--negro);
+    border-radius: 1rem;
+}
+
+.tabla-registros--fila:nth-child(even){
+    background-color: #D5D1D1;
+}
+
+.tabla-registros--fila:hover{
+    background-color: var(--color1);
+    color: var(--blanco);
+}
+
+.tabla-registros,
+.tabla-registros--fila,
+.tabla-registros--columna {
+    border: 3px solid var(--color1);
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.tabla-registros--fila,
+.tabla-registros--columna {
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid var(--color1);
+}
+
+.tabla-registros--columnatitle{
+    background-color: var(--color1);
+    color: var(--blanco);
+    font-weight: bold;
+    text-align : center;    
+}
+
+.tabla-registros--accion{    
+    text-align : center; 
+    justify-content : center;
+    align-items : center; 
+    margin : 0;  
+}
+
+@media (min-width:800px) {
+    .contenedor__formulario .fieldset-clientes {
+        height: 30rem;
+    }
+
+    .fieldset-clientes .registro {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contenedor__formulario .fieldset-id {
+        height: 20rem;
+    }
+
+    .fieldset-asuntos .registro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenedor__formulario .fieldset-asuntos {
+        height: 50rem;
+    }
+
+    .tabla-registros--empresas{
+        width: 40rem;
+    }
+}
+
+
+/*   V E N T A N A S     M O D A L E S   */
+
+.modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/*      M O D A L E S   D I A L O G     */
+
+.dialog-encabezado img{
+    width: 18rem;
+    height: 10rem;
+}
+
+.dialog-encabezado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color1);
+}
+
+.dialog-encabezado h1{
+    font-size: 2.8rem;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.dialog-contenido{
+    max-width : 60%;
+    margin : 0 auto;
+}
+
+/*       C A M P O S    F O R M U L A R I O   D I A L O G      */
+
+.dialogregistro__texto{
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+    margin: 2rem 6rem;
+}
+
+.dialogregistro__texto--label{
+    text-align: justify;
+    font-size: 2rem;
+}
+
+.dialogregistro__texto--input{
+    font-size: 2rem;
+    width : 45rem;
+}
+
+.dialogregistro__texto--select{
+    font-size: 2.1rem;
+}
+
+.dialogregistro__boton--submit{
+    background-color: var(--color1);
+    color: var(--blanco);
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 1rem;    
+}
+
+.dialogregistro__boton--submit a{
+    text-decoration: none;
+}
+
+.dialogregistro__boton--submit:hover{
+    cursor: pointer;
+    color : var(--negro);
+}
+
+.dialogregistro__botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.formularioDialog fieldset{
+    height: 100%;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+@media (min-width : 768px) {
+    .modal {    
+        background-color: #fff;
+        width: 60rem;
+        max-width: 100%;
+        padding: 3rem 5rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        text-align: center;
+    }
+    .modal__content, .modal__content2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+
+.modal p {
+    opacity: 0.7;
+    font-size: 2rem;
+}
+
+.texto-modal {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--negro);
+}
+
+.modal .registro__boton--submit {
+    padding: 1.6rem;
+}
+
+@media (min-width : 768px) {
+    
+}
+
+.modal img, .modal2 img {
+    color: var(--color1);
+    height: 12rem;
+    width: 12rem;
+}
+
+.modal__content--header { 
+    display: flex;
+    flex-direction: column;       
+    margin-bottom: 1rem; 
+    gap: 2rem; 
+}
+
+.modal__content--header img {
+    height: 5rem;
+    width: 20rem;
+}
+.modal__content--header h1 {
+    font-size: 3rem;
+    color: var(--color1);
+    margin: auto;
+}
+
+.tabla-registros--columna a{
+    text-decoration: none;
+}
+
+.tabla-registros--columna a:hover{
+    cursor: pointer;
+    color: var(--blanco);
+}
+
+/*      F O R M U L A R I O     R E G I S T R O S       */
+
+@media (min-width: 768px) {
+    .contenedor__opciones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;        
+        width: 133rem;
+        height: 20rem;               
+    }
+
+    .contenedorConsultas{
+        height: 30rem;
+    }
+}
+
+.contenedor__opciones--logos{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+        
+}
+
+.contenedor__opciones--logos img{
+    margin: 0 auto;
+}
+
+.contenedor__opciones--logos p{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--color1);
+}
+
+.contenedor__opciones--logos a{
+    margin: auto;
+}
+
+.contenedor__opciones--logos a:hover{
+    border: 2px solid var(--color1);
+    border-radius: 1rem;
+}
+
+
+/** PIE PAGINA **/
+
+.pie-pagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: var(--color1);
+    color: var(--blanco);
+    width : 100%;
+    height: 10rem;
+}
+
+.pie-pagina p{
+    font-size: 2rem;
+}
