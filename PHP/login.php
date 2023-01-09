@@ -1,6 +1,7 @@
 <?php
 
 include "conexion.php";
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -9,12 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $usuario = $_POST["txtUsuario"];
         $password = $_POST["txtPassword"];
 
-        $sql = "SELECT * FROM usuarios WHERE n_usuario='" . $usuario . "' and u_password ='" . $password . "'";
+        $sql = "SELECT nombre, paterno, materno FROM usuarios WHERE n_usuario='" . $usuario . "' and u_password ='" . $password . "'";
 
         $resultado = mysqli_query($conn, $sql);
 
 
         if ($log = mysqli_fetch_assoc($resultado)) {
+            $_SESSION["txtUsuario"] = $log["nombre"].' '.$log["paterno"].' '.$log["materno"];
+            $_SESSION["txtPassword"] = $log["u_password"];
 
             //echo "<script>alert('Autenticacion exitosa'); window.location='../HTML/menu.php';</script>";
 ?>
@@ -27,8 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     window.location = '../Buffete/HTML/menu.php';
                 });
             </script>
-
-        <?php        
+        <?php
+        
+        
             //header('location:../HTML/menu.php');  
         } else {
             //echo "<script> alert('Credenciales incorrectas'); window.location='../HTML/index.php';</script>";

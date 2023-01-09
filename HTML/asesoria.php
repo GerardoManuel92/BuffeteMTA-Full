@@ -11,10 +11,10 @@ include "../PHP/includes/header.php";
         <div class="contenedor__formulario">
             <form class="formulario" method="POST">
                 <fieldset>
-                    <legend class="legend"> Complete el formulario </legend>
+                    <legend class="legend">Todos los campos con asterisco (*) son obligatorios</legend>
                     <div class="registro">
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Asesor</label>
+                            <label class="registro__texto--label" for="">Asesor *</label>
                             <select class="registro__texto--select" name="cmbAsesor" id="cmbAsesor">
                                 <option value="">--Seleccionar asesor--</option>
                                 <?php
@@ -27,7 +27,7 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Asesorado</label>
+                            <label class="registro__texto--label" for="">Asesorado *</label>
                             <select class="registro__texto--select" name="cmbAsesorado" id="cmbAsesorado">
                                 <option value="">--Seleccionar asesorado--</option>
                                 <?php
@@ -40,7 +40,7 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Id asunto</label>
+                            <label class="registro__texto--label" for="">Id asunto *</label>
                             <select class="registro__texto--select" name="cmbAsunto" id="cmbAsunto">
                                 <option value="">--Seleccionar id asunto--</option>
                                 <?php
@@ -53,15 +53,15 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Tema</label>
+                            <label class="registro__texto--label" for="">Tema *</label>
                             <input class="registro__texto--input" type="text" name="txtTema" id="txtTema">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Fecha</label>
+                            <label class="registro__texto--label" for="">Fecha *</label>
                             <input class="registro__texto--input" type="date" name="txtFecha" id="txtFecha">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Hora</label>
+                            <label class="registro__texto--label" for="">Hora *</label>
                             <input class="registro__texto--input" type="time" name="txtHora" id="txtHora">
                         </div>
                     </div>

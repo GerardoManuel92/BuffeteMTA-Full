@@ -11,10 +11,10 @@ include "../PHP/includes/header.php";
         <div class="contenedor__formulario">
             <form class="formulario" action="" method="POST">
                 <fieldset>
-                    <legend class="legend"> Complete el formulario </legend>
+                    <legend class="legend">Todos los campos con asterisco (*) son obligatorios</legend>
                     <div class="registro">
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Lugar</label>
+                            <label class="registro__texto--label" for="">Lugar *</label>
                             <select class="registro__texto--select" name="cmbLugar" id="cmbLugar">
                                 <option value="">--Seleccionar lugar--</option>
                                 <?php
@@ -27,15 +27,15 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Fecha</label>
+                            <label class="registro__texto--label" for="">Fecha *</label>
                             <input class="registro__texto--input" type="date" name="txtFecha" id="txtFecha">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Hora</label>
+                            <label class="registro__texto--label" for="">Hora *</label>
                             <input class="registro__texto--input" type="time" name="txtHora" id="txtHora">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Asunto</label>
+                            <label class="registro__texto--label" for="">Asunto *</label>
                             <select class="registro__texto--select" name="cmbAsunto" id="cmbAsunto">
                                 <option value="">--Seleccionar id asunto--</option>
                                 <?php
@@ -48,7 +48,7 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Resolución</label>
+                            <label class="registro__texto--label" for="">Resolución *</label>
                             <input class="registro__texto--input" type="text" name="txtResolucion" id="txtResolucion">
                         </div>
                     </div>

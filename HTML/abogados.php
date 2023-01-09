@@ -12,30 +12,30 @@ include "../PHP/includes/header.php";
         <div class="contenedor__formulario">
             <form class="formulario" action="" method="POST">
                 <fieldset>
-                    <legend class="legend"> Complete el formulario </legend>
+                    <legend class="legend">Todos los campos con asterisco (*) son obligatorios</legend>
                     <div class="registro">
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Nombre</label>
+                            <label class="registro__texto--label" for="">Nombre *</label>
                             <input class="registro__texto--input" type="text" name="txtNombre" id="txtNombre">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Apellido Paterno</label>
+                            <label class="registro__texto--label" for="">Apellido Paterno *</label>
                             <input class="registro__texto--input" type="text" name="txtPaterno" id="txtPaterno">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Apellido Materno</label>
+                            <label class="registro__texto--label" for="">Apellido Materno *</label>
                             <input class="registro__texto--input" type="text" name="txtMaterno" id="txtMaterno">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">RFC</label>
+                            <label class="registro__texto--label" for="">RFC *</label>
                             <input class="registro__texto--input" type="text" name="txtRFC" id="txtRFC">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Cédula</label>
+                            <label class="registro__texto--label" for="">Cédula *</label>
                             <input class="registro__texto--input" type="text" name="txtCedula" id="txtCedula">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Grado</label>
+                            <label class="registro__texto--label" for="">Grado *</label>
                             <select class="registro__texto--select" name="cmbGrado" id="cmbGrado">
                                 <option value="0">--Seleccionar grado--</option>
                                 <?php

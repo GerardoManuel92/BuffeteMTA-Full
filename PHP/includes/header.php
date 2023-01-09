@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -44,12 +47,12 @@
                     <li><a class="navegador__menu--link" href="../HTML/lugares.php">Lugares de Audiencias</a></li>
                     <li><a class="navegador__menu--link" href="../HTML/tipos.php">Tipos asuntos para demandas</a></li>
                     <li><a class="navegador__menu--link" href="../HTML/tiposAsuntos.php">Tipos de Asuntos</a></li>
-                    <li><a class="navegador__menu--link" href="../index.php">Salir</a></li>
+                    <li><a class="navegador__menu--link" href="../index.php">Cerrar sesión</a></li>
                 </ul>
             </li>
         </ul>
     </div>
     <div class="navegador__sesion finsesion">
-        <a class="navegador__menu--link" href="../index.php">Cerrar sesion</a>
+    <a class="navegador__menu--link" style="text-decoration: none; font-size: 2rem;"> Usuario: <?php echo $_SESSION['txtUsuario']?></a>
     </div>
 </header>

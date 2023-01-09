@@ -11,10 +11,10 @@ include "../PHP/includes/header.php";
         <div class="contenedor__formulario">
             <form class="formulario" action="" method="POST">
                 <fieldset class="fieldset-asuntos">
-                    <legend class="legend"> Complete el formulario </legend>
+                    <legend class="legend">Todos los campos con asterisco (*) son obligatorios</legend>
                     <div class="registro">
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="clientes">Cliente</label>
+                            <label class="registro__texto--label" for="clientes">Cliente *</label>
                             <select class="registro__texto--select" name="cmbCliente" id="cmbCliente">
                                 <option value="0">--Seleccionar cliente--</option>
                                 <?php
@@ -27,7 +27,7 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Demandado</label>
+                            <label class="registro__texto--label" for="">Demandado *</label>
                             <select class="registro__texto--select" name="cmbDemandado" id="cmbDemandado">
                                 <option value="">--Seleccionar demandado--</option>
                                 <?php
@@ -40,7 +40,7 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Abogado</label>
+                            <label class="registro__texto--label" for="">Abogado *</label>
                             <select class="registro__texto--select" name="cmbAbogado" id="cmbAbogado">
                                 <option value="">--Seleccionar abogado-</option>
                                 <?php
@@ -53,7 +53,7 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Estado</label>
+                            <label class="registro__texto--label" for="">Estado *</label>
                             <select class="registro__texto--select" name="cmbEstado" id="cmbEstado">
                                 <option value="">--Seleccionar estado-</option>
                                 <?php
@@ -66,7 +66,7 @@ include "../PHP/includes/header.php";
                             </select>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Tipo de asunto</label>
+                            <label class="registro__texto--label" for="">Tipo de asunto *</label>
                             <select class="registro__texto--select" name="cmbAsunto" id="cmbAsunto">
                                 <option value="">--Seleccionar tipo asunto-</option>
                                 <?php
@@ -80,11 +80,11 @@ include "../PHP/includes/header.php";
                         </div>
                         <div class="registro__texto"></div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Fecha inicio</label>
+                            <label class="registro__texto--label" for="">Fecha inicio *</label>
                             <input class="registro__texto--input" type="date" name="txtFechaInicio" id="txtFechaInicio">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Fecha final</label>
+                            <label class="registro__texto--label" for="">Fecha final *</label>
                             <input class="registro__texto--input" type="date" name="txtFechaFinal" id="txtFechaFinal">
                         </div>
                     </div>

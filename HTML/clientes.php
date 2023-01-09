@@ -9,12 +9,14 @@ include "../PHP/includes/header.php";
 <body>
     <main class="contenedor contenedor2">
         <div class="contenedor__formulario">
+            <legend class="legend">**Importante!!** Primero deberás capturar datos personales del cliente y posteriormente los medios de contacto</legend>
+            <br>
             <form class="formulario" action="" method="POST">
                 <fieldset class="fieldset-clientes">
-                    <legend class="legend"> Complete el formulario </legend>
+                    <legend class="legend">Todos los campos con asterisco (*) son obligatorios</legend>
                     <div class="registro">
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Id cliente</label>
+                            <label class="registro__texto--label" for="">Id cliente </label>
                             <?php
                             $consultaId = "SELECT MAX((id_cliente)+1) as id from cliente";
                             $query = mysqli_query($conn, $consultaId);
@@ -24,23 +26,23 @@ include "../PHP/includes/header.php";
                             <?php } ?>
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Nombre</label>
+                            <label class="registro__texto--label" for="">Nombre *</label>
                             <input class="registro__texto--input" type="text" name="txtNombre" id="txtNombre">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Apellido Paterno</label>
+                            <label class="registro__texto--label" for="">Apellido Paterno *</label>
                             <input class="registro__texto--input" type="text" name="txtPaterno" id="txtPaterno">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Apellido Materno</label>
+                            <label class="registro__texto--label" for="">Apellido Materno *</label>
                             <input class="registro__texto--input" type="text" name="txtMaterno" id="txtMaterno">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">CURP</label>
+                            <label class="registro__texto--label" for="">CURP *</label>
                             <input class="registro__texto--input" type="text" name="txtCurp" id="txtCurp">
                         </div>
                         <div class="registro__texto">
-                            <label class="registro__texto--label" for="">RFC</label>
+                            <label class="registro__texto--label" for="">RFC *</label>
                             <input class="registro__texto--input" type="text" name="txtRFC" id="txtRFC">
                         </div>
                     </div>
@@ -57,19 +59,16 @@ include "../PHP/includes/header.php";
                 </div>
             </form>
             <form class="formulario" action="" method="POST">
-                <fieldset class="fieldset-clientes">
+                <fieldset class="fieldset-clientes" style="height : 15rem;">
+                    <?php
+                    $consultaId = "SELECT MAX(id_contacto) as id from contacto";
+                    $query = mysqli_query($conn, $consultaId);
+                    while ($fila = mysqli_fetch_assoc($query)) {
+                    ?>
+                        <input class="registro__texto--input registro__texto--inputId" type="text" name="txtIdContacto" id="txtId" value="<?php echo $fila['id']; ?>" hidden>
+                    <?php } ?>
                     <legend class="legend">Información de contacto</legend>
                     <div class="registro">
-                        <div class="registro__texto">
-                            <label class="registro__texto--label" for="">Id contacto</label>
-                            <?php
-                            $consultaId = "SELECT MAX(id_contacto) as id from contacto";
-                            $query = mysqli_query($conn, $consultaId);
-                            while ($fila = mysqli_fetch_assoc($query)) {
-                            ?>
-                                <input class="registro__texto--input registro__texto--inputId" type="text" name="txtIdContacto" id="txtId" value="<?php echo $fila['id']; ?>" readonly>
-                            <?php } ?>
-                        </div>
                         <div class="registro__texto">
                             <label class="registro__texto--label" for="">Facebook</label>
                             <input class="registro__texto--input" type="text" name="txtFacebook" id="txtFacebook">
@@ -87,7 +86,7 @@ include "../PHP/includes/header.php";
                 <div class="registro__boton">
                     <input class="registro__boton--submit" type="submit" value="Guardar" name="btnRegistraContacto">
                 </div>
-            </form>            
+            </form>
             <div class="contenedor__tabla">
                 <div class="outer-wrapper">
                     <div class="table-wrapper">
@@ -131,6 +130,6 @@ include "../PHP/includes/header.php";
         </div>
     </main>
 </body>
-
+<?php include "../PHP/includes/footer.php"; ?>
 </html>
 <?php include "../PHP/registros/registrarClientes.php"; ?>

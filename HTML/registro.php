@@ -26,24 +26,36 @@ include "../PHP/conexion.php";
             <h1 class="encabezado">Por favor llene el formulario</h1>
             <form class="formulario-registro" action="" method="POST">
                 <legend>**Todos los campos son obligatorios**</legend>
-                <div class="campos">                    
+                <div class="campos">
+                <div class="campos__texto">
+                        <label class="campos__texto--label" for="">Nombre completo (*)</label>
+                        <input class="campos__texto--input" type="text" name="txtNombre" id="txtNombre">
+                    </div>
                     <div class="campos__texto">
-                        <label class="campos__texto--label" for="">Usuario</label>
+                        <label class="campos__texto--label" for="">Apellido Paterno (*)</label>
+                        <input class="campos__texto--input" type="text" name="txtPaterno" id="txtPaterno">
+                    </div>
+                    <div class="campos__texto">
+                        <label class="campos__texto--label" for="">Apellido Materno (*)</label>
+                        <input class="campos__texto--input" type="text" name="txtMaterno" id="txtMaterno">
+                    </div>                    
+                    <div class="campos__texto">
+                        <label class="campos__texto--label" for="">Usuario (*)</label>
                         <input class="campos__texto--input" type="text" name="txtUsuario" id="txtUsuario">
                     </div>
                     <div class="campos__texto">
-                        <label class="campos__texto--label" for="">Password</label>
+                        <label class="campos__texto--label" for="">Password (*)</label>
                         <input class="campos__texto--input" type="password" name="txtPassword1" id="txtPassword1">
                     </div>
                     <div class="campos__texto">
-                        <label class="campos__texto--label" for="">Confirmar Password</label>
+                        <label class="campos__texto--label" for="">Confirmar Password (*)</label>
                         <input class="campos__texto--input" type="password" name="txtPassword2" id="txtPassword2">
-                    </div> 
-                    <div class="campos__texto">
+                    </div>                                       
+                </div>
+                <div class="campos__texto">
                         <label for=""></label>
                         <input class="registro__boton--submit botonRegistro" type="submit" value="Registrar">
-                    </div>                   
-                </div>
+                    </div> 
             </form>           
             <a class="link" href="../index.php">Regresar a menú</a>
         </div>
